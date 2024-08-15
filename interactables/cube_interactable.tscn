@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvm0teauo80do"]
+
+[ext_resource type="PackedScene" uid="uid://dgibu7qyoy7rk" path="res://interactables/interact_generic.tscn" id="1_7cxcf"]
+[ext_resource type="Script" path="res://interactables/cube_interactable.gd" id="2_q45nl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_frv5p"]
+
+[node name="cube_interactable" instance=ExtResource("1_7cxcf")]
+script = ExtResource("2_q45nl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("BoxMesh_frv5p")

@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw083tgnm1gy3"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_nx3ms"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uilil"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qniin"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_nx3ms")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_uilil")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+
+[node name="InteractRayCast" type="RayCast3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.2, 0, -0.3, 0)
+target_position = Vector3(0, 0, -2)
+collide_with_areas = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_qniin")
+
+[node name="FloorDetectRayCast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.38682, 0)
+
+[node name="PlayerFootstepSound" type="AudioStreamPlayer3D" parent="."]
+
+[node name="InteractLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.56
+anchor_top = 0.5
+anchor_right = 0.56
+anchor_bottom = 0.5
+offset_left = 7.28
+offset_top = 8.0
+offset_right = 68.28
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Interact"

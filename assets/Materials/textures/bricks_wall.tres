@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c8uii7v6hvshq"]
+
+[ext_resource type="Texture2D" uid="uid://cn7fvwdx5021e" path="res://assets/Materials/textures/bricks_wall.jpg" id="1_q34pu"]
+
+[resource]
+albedo_texture = ExtResource("1_q34pu")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0

@@ -1,0 +1,14 @@
+MeshInstance3D
+Label
+Area3D
+StaticBody3D
+AudioStreamPlayer2D
+CollisionShape3D
+AnimationPlayer
+Node3D
+Node
+OmniLight3D
+LightmapGI
+RayCast3D
+AudioStreamPlayer3D
+CharacterBody3D

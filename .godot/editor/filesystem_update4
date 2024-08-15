@@ -1,0 +1,7 @@
+res://maps/level_1.tscn
+res://interactables/door.gd
+res://assets/Materials/textures/wood_floor.tres
+res://assets/Materials/textures/bricks_wall.tres
+res://interactables/door.tscn
+res://interactables/key.tscn
+res://player/player.tscn
